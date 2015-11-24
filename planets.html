@@ -1,20 +1,16 @@
-<ul> 
-  <button ng-click='backSomething()' ng-disabled='buttonClicked'> Previous page </button>
-  <button ng-click='doSomething()' ng-disabled='buttonClicked'> Next page </button>  
+<ul>
+  <a  ng-click='backSomething()' ui-sref="planets({page: page})" ng-disabled='clicked'> Previous page </a> :: 
+  <a  ng-click='doSomething()' ui-sref="planets({page: page})" ng-disabled='clicked'> Next page </a> 
 
 <!--   <h2> Page {{page}} </h2> -->
   <br>
-
   <li ng-repeat="planet in planets" >{{planet.name}} -- {{planet.population}}
     <ul>
       <li ng-repeat="resident in planet.residents">
-        
-        <a ui-sref="resident({id: resident.id})" ng-hide='{{!resident}}'>
-          Resident #:{{resident.id}}  ::   {{resident.url}}
+        <h2> {{answer[resident.id][0]}} </h2>
+        <a ui-sref="resident({id: resident.id})" ng-hide="{{answer[resident.id]}}">
+          Resident :: {{resident.name || resident.id}}  ::   {{resident.url}}
         </a>
-          <div ng-hide='{{!answer}}' ng-controller='ResidentCtrl' >
-          <h2>  {{answer[resident.id][0]}} </h2> 
-          </div>
       </li>
     </ul>
 
