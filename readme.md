@@ -1,9 +1,4 @@
-<h1> Star wars API by Adam T. </h1>
-
-Current Bugs:<br><br>
-1. It takes two refreshes to show the resident name.
-<br>
-2. Having a nested controller function inside of a ng-repeat results in wasteful traffic.
-<br>
-3. Takes two clicks to turn the page.
-
+ <h1<Star wars API by Adam T. </h1> <br><br>
+Current Bugs [updated @ 12pm] :
+<br><br>
+1. The State.Param for the page of the planets.html is buggy, takes multiple clicks to execute.
