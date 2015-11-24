@@ -1,6 +1,7 @@
 <ul>
-  <a  ng-click='backSomething()' ui-sref="planets({page: page})" ng-disabled='clicked'> Previous page </a> :: 
-  <a  ng-click='doSomething()' ui-sref="planets({page: page})" ng-disabled='clicked'> Next page </a> 
+  <a  ng-click='backSomething()'  ng-disabled='clicked' ng-model='wait'> {{wait || "previous page"}} </a> :: 
+  <a  ng-click='doSomething()'  ng-disabled='clicked' ng-model='wait'> {{wait || "next page"}} </a>  <br><br>
+  <!-- <a  ng-click='$state.go('planets/1')}' ng-disabled='clicked' ng-model='wait'> Back to Page 1 </a> <br><br> -->
 
 <!--   <h2> Page {{page}} </h2> -->
   <br>
